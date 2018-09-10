@@ -1,75 +1,47 @@
 package com.thinkgem.jeesite.common.web;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import com.mangofactory.swagger.configuration.SpringSwaggerConfig;
-import com.mangofactory.swagger.models.dto.ApiInfo;
-import com.mangofactory.swagger.plugin.EnableSwagger;
-import com.mangofactory.swagger.plugin.SwaggerSpringMvcPlugin;
 
+import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-/**
- * @author xiegx
- * @version 创建时间：2016-8-16 下午2:01:10
- * SwaggerUI配置
- */
-@Configuration
-@EnableSwagger
-@EnableWebMvc
-@ComponentScan(basePackages ={"com.thinkgem.jeesite.modules.sys.web"})
-public class SwaggerConfig extends WebMvcConfigurerAdapter {
+@Configuration //必须存在
+@EnableSwagger2 //必须存在
+@EnableWebMvc //必须存在
+@ComponentScan(basePackages = {
+        "com.thinkgem.jeesite.modules.test.web"
+//        , "com.thinkgem.jeesite.modules.customer.api",
+//        "com.thinkgem.jeesite.modules.campaign.api",
+//        "com.thinkgem.jeesite.modules.info.api",
+//        "com.thinkgem.jeesite.modules.notice.api",
+//        "com.thinkgem.jeesite.modules.base.api",
+//        "com.thinkgem.jeesite.modules.prettypictures.api",
+//        "com.thinkgem.jeesite.modules.publicclass.api",
+//        "com.thinkgem.jeesite.modules.sharecase.api"
+}) //必须存在 扫描的API Controller package name 也可以直接扫描class (basePackageClasses)
+public class SwaggerConfig{
 
-    private SpringSwaggerConfig springSwaggerConfig;
-
-    /**
-     * Required to autowire SpringSwaggerConfig
-     */
-    @Autowired
-    public void setSpringSwaggerConfig(SpringSwaggerConfig springSwaggerConfig)
-    {
-        this.springSwaggerConfig = springSwaggerConfig;
-    }
-
-    /**
-     * Every SwaggerSpringMvcPlugin bean is picked up by the swagger-mvc
-     * framework - allowing for multiple swagger groups i.e. same code base
-     * multiple swagger resource listings.
-     */
     @Bean
-    public SwaggerSpringMvcPlugin customImplementation()
-    {
-        return new SwaggerSpringMvcPlugin(this.springSwaggerConfig)
-                .apiInfo(apiInfo())
-                .includePatterns(".*")
-                .swaggerGroup("XmPlatform")
-                .apiVersion("1.0.0");
+    public Docket customDocket() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo());
     }
 
-    @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        configurer.enable();
-    }
-    /*
-     * "标题 title",
-     * "描述 description",
-     * "termsOfServiceUrl",
-     * "联系邮箱 contact email",
-     * "许可证的类型 license type",
-     * "许可证的链接 license url"
-     */
-    private ApiInfo apiInfo()
-    {
-        ApiInfo apiInfo = new ApiInfo(
-                "project API",
-                "RESTful API",
-                "",//
-                "JAVA",
-                "",
-                "");
-        return apiInfo;
+    private ApiInfo apiInfo() {
+        Contact contact = new Contact("qixianchuan", "", "");
+        return new ApiInfoBuilder()
+                .title("手机端API接口")
+                .description("用于测试使用")
+                .contact(contact)
+                .version("1.1.0")
+                .build();
     }
 }
+
