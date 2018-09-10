@@ -16,9 +16,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2 //必须存在
 @EnableWebMvc //必须存在
 @ComponentScan(basePackages = {
-        "com.thinkgem.jeesite.modules.test.web"
-//        , "com.thinkgem.jeesite.modules.customer.api",
-//        "com.thinkgem.jeesite.modules.campaign.api",
+        "com.thinkgem.jeesite.modules.test.web",
+        "com.thinkgem.jeesite.modules.sys.web"
+//        ,"com.thinkgem.jeesite.modules.campaign.api",
 //        "com.thinkgem.jeesite.modules.info.api",
 //        "com.thinkgem.jeesite.modules.notice.api",
 //        "com.thinkgem.jeesite.modules.base.api",
