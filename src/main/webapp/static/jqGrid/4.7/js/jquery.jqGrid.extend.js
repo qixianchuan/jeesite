@@ -1,7 +1,7 @@
 /**
  * jqGrid 封装类
- * @author ThinkGem@163.COM
- * @version 2015-5-4
+ * 
+ * 
  */
 var DataGrid = function(options, $this){
 	
@@ -885,7 +885,7 @@ $.extend($.jgrid,{
 
 /**
  * 扩展jqGrid方法
- * @author ThinkGem@163.com
+ * 
  * @version 2015-1-12
  * @param $
  */

@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * 
  */
 package com.thinkgem.jeesite.modules.cms.web.front;
 
@@ -15,7 +15,7 @@ import com.thinkgem.jeesite.modules.cms.utils.WiexinSignUtil;
 
 /**
  * 测试Controller
- * @author ThinkGem
+ * 
  * @version 2014-02-28
  */
 @Controller

@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * 
  */
 package com.thinkgem.jeesite.modules.gen.service;
 
@@ -21,7 +21,7 @@ import com.thinkgem.jeesite.modules.gen.dao.GenTableDao;
 
 /**
  * 业务表Service
- * @author ThinkGem
+ * 
  * @version 2013-10-15
  */
 @Service

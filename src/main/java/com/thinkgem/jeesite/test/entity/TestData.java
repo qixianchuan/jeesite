@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * 
  */
 package com.thinkgem.jeesite.test.entity;
 
@@ -14,7 +14,7 @@ import com.thinkgem.jeesite.common.persistence.DataEntity;
 
 /**
  * 单表生成Entity
- * @author ThinkGem
+ * 
  * @version 2015-04-06
  */
 public class TestData extends DataEntity<TestData> {

@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * 
  */
 package com.thinkgem.jeesite.modules.cms.entity;
 
@@ -18,7 +18,7 @@ import com.thinkgem.jeesite.modules.cms.utils.CmsUtils;
 
 /**
  * 文章Entity
- * @author ThinkGem
+ * 
  * @version 2013-05-15
  */
 public class Article extends DataEntity<Article> {

@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * 
  */
 package com.thinkgem.jeesite.test.service;
 
@@ -15,7 +15,7 @@ import com.thinkgem.jeesite.test.dao.TestDataDao;
 
 /**
  * 单表生成Service
- * @author ThinkGem
+ * 
  * @version 2015-04-06
  */
 @Service

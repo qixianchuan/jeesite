@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * 
  */
 package com.thinkgem.jeesite.modules.cms.utils;
 
@@ -30,7 +30,7 @@ import org.springframework.ui.Model;
 
 /**
  * 内容管理工具类
- * @author ThinkGem
+ * 
  * @version 2013-5-29
  */
 public class CmsUtils {
