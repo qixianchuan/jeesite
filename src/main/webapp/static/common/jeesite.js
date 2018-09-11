@@ -16,6 +16,16 @@ $(document).ready(function() {
 	}catch(e){
 		// blank
 	}
+
+	//添加当表单提交时，防止表单重复提交（统一方法）
+    $.validator.setDefaults({
+        submitHandler: function() {
+            $('form [type="submit"]').attr("disabled","disabled");
+            loading('正在提交，请稍等...');
+            form.submit();
+        }
+    });
+
 });
 
 // 引入js和css文件
