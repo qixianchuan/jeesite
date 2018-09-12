@@ -14,7 +14,6 @@ import com.thinkgem.jeesite.common.utils.StringUtils;
 /**
  * 数据Entity类
  * 
- * @version 2014-05-16
  */
 public abstract class TreeEntity<T> extends DataEntity<T> {
 

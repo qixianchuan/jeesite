@@ -78,6 +78,10 @@ return "modules/sys/sysLogin"
 把sysLogin修改为 sysLogin2
 不过感觉这个sysLogin2没有sysLogin好看，所以修改回去
 
+jeesite-api是在jeesite的基础上新增了移动服务端快速开发的框架，其后台管理仍然使用jeesite（https://github.com/thinkgem/jeesite ），
+传输格式为JSON，提供了通用的返回类，用户验证，记录日志等。使用了经典框架Spring、SpringMVC、MyBatis，上手快。
+https://github.com/javyuan/jeesite-api
+
 
 Jeesite之login模块的从头到尾整合
 https://blog.csdn.net/weixin_40595244/article/details/80883129
@@ -166,7 +170,3 @@ java.lang.NullPointerException
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-
-
-
-

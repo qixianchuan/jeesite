@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 /**
  * 标识MyBatis的DAO,方便{@link org.mybatis.spring.mapper.MapperScannerConfigurer}的扫描。 
  * 
- * @version 2013-8-28
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

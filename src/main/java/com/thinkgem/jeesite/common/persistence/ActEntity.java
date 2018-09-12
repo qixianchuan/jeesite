@@ -11,7 +11,7 @@ import com.thinkgem.jeesite.modules.act.entity.Act;
 /**
  * Activiti Entity类
  * 
- * @version 2013-05-28
+ * 
  */
 public abstract class ActEntity<T> extends DataEntity<T> implements Serializable {
 

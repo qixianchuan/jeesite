@@ -11,7 +11,6 @@ import com.thinkgem.jeesite.common.utils.SpringContextHolder;
 /**
  * 页面高速缓存过滤器
  * 
- * @version 2013-8-5
  */
 public class PageCachingFilter extends SimplePageCachingFilter {
 
